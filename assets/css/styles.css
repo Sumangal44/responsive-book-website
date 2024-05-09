@@ -23,9 +23,9 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -45,8 +45,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -71,7 +71,7 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 input,
@@ -80,7 +80,10 @@ button {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
@@ -103,12 +106,10 @@ img {
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 
-
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
-
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -137,76 +138,126 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  transition: box-shadow 0.4s, background-color 0.4s;
+}
+.nav {
+  /* width: 100%; */
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+}
+.nav__logo i {
+  font-size: 1.25rem;
+}
 
 /* Navigation for mobile devices */
-
+@media screen and (max-width: 1050px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    padding: 1.25rem 4rem;
+    box-shadow: 0 -8px 32px hsla(0, 0%, 0%, 0.1);
+    transition: background-color 0.4s;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  /* column-gap: 1rem; */
+}
+.nav__link {
+  color: var(--text-color);
+  transition: color 0.4s;
+}
+.nav__link span {
+  display: none;
+}
+.nav__link i {
+  font-size: 1.25rem;
+}
+.nav__link:hover {
+  color: var(--first-color);
+}
+.nav__actions {
+  /* flex-direction: row; */
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.nav__actions i {
+  font-size: 1.25rem;
+  color: var(--tittle-color);
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.nav__actions i:hover {
+  color: var(--first-color);
+}
 
 /* Add shadow header */
 
-
 /* Active link */
-
 
 /*=============== SEARCH ===============*/
 
-
 /* Show search */
-
 
 /*=============== LOGIN ===============*/
 
-
 /* Show login */
-
 
 /*=============== HOME ===============*/
 
-
 /* Swiper class */
-
 
 /*=============== BUTTON ===============*/
 
-
 /*=============== SERVICES ===============*/
-
 
 /*=============== FEATURED ===============*/
 
-
 /* Swiper class */
-
 
 /*=============== DISCOUNT ===============*/
 
-
 /*=============== NEW ===============*/
-
 
 /*=============== JOIN ===============*/
 
-
 /*=============== TESTIMONIAL ===============*/
-
 
 /*=============== FOOTER ===============*/
 
-
 /*=============== SCROLL BAR ===============*/
-
 
 /*=============== SCROLL UP ===============*/
 
-
 /* Show Scroll Up */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
-
 /* For medium devices */
-
 
 /* For large devices */
