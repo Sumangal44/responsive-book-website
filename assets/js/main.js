@@ -18,10 +18,43 @@ if (searchClose) {
 }
 
 /*=============== LOGIN ===============*/
+const loginButton = document.getElementById("login-button");
+loginClose = document.getElementById("login-close");
+loginContent = document.getElementById("login-content");
+// login show
+// validate if constant exists
+if (loginButton) {
+  loginButton.addEventListener("click", () => {
+    loginContent.classList.add("show-login");
+  });
+}
+// login hidden
+// validate if const is exists
+if (loginClose) {
+  loginClose.addEventListener("click", () => {
+    loginContent.classList.remove("show-login");
+  });
+}
 
 /*=============== ADD SHADOW HEADER ===============*/
 
 /*=============== HOME SWIPER ===============*/
+let swiperHome = new Swiper(".home__swiper", {
+  loop: true,
+  spaceBetween: -24,
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: "auto",
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1220: {
+      spaceBetween: -32,
+    },
+  },
+});
 
 /*=============== FEATURED SWIPER ===============*/
 
